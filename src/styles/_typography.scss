@@ -1,0 +1,8 @@
+@mixin base-font {
+  font-family: 'Merienda', cursive !important;
+}
+
+@mixin content-center {
+  margin-left: auto;
+  margin-right: auto;
+}

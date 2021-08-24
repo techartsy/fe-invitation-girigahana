@@ -1,0 +1,68 @@
+@import '../../styles/base';
+
+.footer-container {
+  @include base-font;
+  margin-top: 1rem;
+  background-color: $color-dark-grey;
+  color: $color-white;
+  padding-top: 2%;
+  margin-top: -5px;
+  @include apply-at-sm-size {
+    padding-top: 0.5rem;
+  }
+}
+.icon-container {
+  @include content-center;
+  @include base-font;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.notes {
+  @include base-font;
+  font-size: 12px;
+  margin-top: 3%;
+}
+.copyright {
+  background-color: $color-orange;
+  color: black;
+  margin-top: 3%;
+}
+.copyright-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.icon-wrapper img{
+  width: 85px;
+  height: 87px;
+}
+.title {
+  margin-bottom: 5%;
+  text-decoration-line: underline;
+  text-underline-offset: 21.5px;
+}
+.medsos-container {
+  @include content-center;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  @include apply-at-sm-size {
+    width: 50%;
+  }
+}
+.medsos-item {
+  width: 40px;
+  height: 40px;
+  @include apply-at-sm-size {
+    width: 30px;
+    height: 30px;
+  }
+}

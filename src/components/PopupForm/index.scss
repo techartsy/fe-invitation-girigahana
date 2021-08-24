@@ -1,0 +1,44 @@
+@import '../../styles/base';
+
+.dialog-container {
+  @include base-font;
+}
+
+.dialog-header {
+  @include base-font;
+}
+
+.contact {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  @include apply-at-sm-size {
+    margin-top: 0px;
+  }
+}
+.form-input {
+  @include base-font;
+  margin-top: -20px;
+}
+.my-swal {
+  z-index: 10000 !important;
+}
+.swal2-container {
+  display: -webkit-box;
+  display: flex;
+  position: fixed;
+  z-index: 5 !important;
+}
+.swal-overlay {
+  z-index: 100000000000 !important;
+}
+:host   ::ng-deep .swal2-container {
+  z-index: 300000 !important;
+}
+.title-contact a{
+  text-decoration: none;
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+  color: $color-dark-grey;
+}

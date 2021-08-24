@@ -1,0 +1,7 @@
+@import '../../styles/base';
+
+.image-slide {
+  width: 85%;
+  margin: 1rem 0;
+  @include content-center;
+}

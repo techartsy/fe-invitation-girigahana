@@ -1,0 +1,52 @@
+@import '../../styles/base';
+
+.started-container {
+  @include base-font;
+  background-image: url('../../static/images/wood-faded.png');
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include apply-at-sm-size {
+    background-image: url('../../static/images/wooden-sm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+.board {
+  margin-top: 7%;
+}
+
+.board img {
+  @include apply-at-sm-size {
+    margin-top: 50%;
+    width: 80%;
+  }
+}
+
+.btn-started {
+  @include content-center;
+  background-color: $color-orange;
+  margin-top: 82px;
+  width: 376px;
+  height: 70px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include apply-at-sm-size {
+    @include content-center;
+    width: 45%;
+    height: 5%;
+    font-size: 12px;
+  }
+}
+
+.btn-started:hover {
+  cursor: pointer;
+}

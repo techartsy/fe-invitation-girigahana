@@ -1,0 +1,120 @@
+/*
+ * Filename: _colors.scss
+ * Purpose: Includes a list of colors that should be used in the application.
+*/
+
+/**************** SASS VARIABLES ***********************/
+// Begin with simple, human-readable color names, which should be stable:
+// DON'T CONSUME THESE IN YOUR CODE!
+
+// Slightly lighten a color
+// @access public
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+// Slightly darken a color
+// @access public
+// @param {Color} $color - color to shade
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+// Primary colors
+$color-black: #000;
+$color-white: #fff;
+$color-white-on-hover: #dedede;
+$color-white-fade: rgba(255, 255, 255, 0.6);
+$color-white-fade-2: rgba(255, 255, 255, 0.15);
+$color-orange: #F45B04;
+$color-red: #e5131c;
+$color-red-default: #e5131d;
+$color-red-1: #b70f17;
+$color-red-shade-10: shade($color-red, 10%);
+$color-red-shade-15: shade($color-red, 15%);
+$color-red-shade-20: shade($color-red, 20%);
+$color-red-shade-25: shade($color-red, 25%);
+$color-dark-blue: #0f2236;
+$color-dark-blue-2: #0d1c2d;
+$color-dark-blue-tint-10: tint($color-dark-blue, 10%);
+$color-dark-blue-transparent: transparentize($color-dark-blue, 0.1);
+$color-dark-blue-transparent5: transparentize($color-dark-blue, 0.5);
+$color-dark-blue-2-transparent: transparentize($color-dark-blue-2, 0.4);
+$color-dark-blue-3: #0e2237;
+$color-dark-grey: #302E2E;
+$color-dark-grey-1: #6d6e70;
+$color-dark-grey-2: #b0b3b8;
+$color-dark-grey-3: #d2d5d9;
+$color-dark-grey-transparent: transparentize($color-dark-grey, 0.3);
+$color-light-grey-1: #f1f1f1;
+$color-light-grey-1-shade-10: shade($color-light-grey-1, 10%);
+$color-light-grey-2: #9ca4ac;
+$color-light-grey-3: #dbd9d6;
+$color-light-grey-4: #9fa2a7;
+$color-light-grey-5: #d6d6d6;
+$color-light-grey-6: #cccfd3;
+$color-light-grey-7: #e5e7e9;
+$color-light-grey-8: #f0f1f2;
+$color-light-grey-9: #eaeef1;
+$color-light-grey-10: #fafafb;
+$color-black-default: #001122;
+$color-ocean-blue-1: #002a46;
+$color-ocean-blue-2: #cce1ef;
+$color-space-blue: #193153;
+$color-placeholder: #99a0a7;
+$color-blue-transparent: rgba(25, 49, 83, 0.8);
+
+$color-red-alt: #e5131d;
+$color-red-alt-1: #dc0017;
+$color-grey-disabled: #efefef;
+$color-title: #baab8f;
+
+// Accent colors
+$color-blue: #005caa;
+$color-blue-shade-10: shade($color-blue, 10%);
+$color-magenta: #8e0b64;
+$color-magenta-shade-10: shade($color-magenta, 10%);
+$color-gold: #df9a14;
+$color-gold-shade-10: shade($color-gold, 10%);
+$color-green: #1d9940;
+$color-dark-yellow: #e79405;
+
+// special colors
+$color-twitter-blue: #5aa8df;
+$color-twitter-blue-hover: #4786b5;
+$color-facebook-blue: #4460a0;
+$color-facebook-blue-hover: #375085;
+$color-line-green-hover: #00c300;
+$color-telegram-blue-hover: #0088cc;
+$color-social-background-grey: #263749;
+
+// loyalty tier colors
+$color-tier-mass: #93999d;
+$color-tier-mass-2: #b6b6b6;
+$color-tier-red: #ff0000;
+$color-tier-red-2: #e93838;
+$color-tier-gold: #ffd700;
+$color-tier-gold-2: #df9a14;
+$color-tier-priority: #3f3e47;
+$color-tier-priority-2: #0c1c2e;
+
+// snack bar info
+$color-snackbar-info: #0c1c2e;
+
+$color-grey-disabled-2: #a5a9ad;
+$color-dark-blue-disabled: #86909b;
+$color-grey-disabled-3: #f2f2f2;
+$color-grey-disabled-4: #d8d8d8;
+$color-yellow-alt: #ffbb3e;
+$color-navy-blue: #0068af;
+$color-dark-grey: #302E2E;
+$color-light-grey: #b0b4b9;
+$color-light-red: #f8d2d6;
+$color-light-orange: #ffe2cc;
+$color-brown: #662c00;
+$color-orange: #fe6e00;

@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Started, Invitation } from './containers';
+import store from './store';
+import { Provider } from 'react-redux';
 
 function App() {
+  const [showInvitation, setShowInvitation] = useState(false);
+
+  const goToInvitation = () => {
+    setShowInvitation(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        {!showInvitation ?
+          <Started goToInvitation={goToInvitation} />
+          :
+          <Invitation />
+        }
+      </div>
+    </Provider>
   );
 }
 

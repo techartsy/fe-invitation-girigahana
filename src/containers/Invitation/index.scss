@@ -1,0 +1,479 @@
+@import '../../styles/base';
+
+.invitation-container {
+  @include base-font;
+  @include apply-at-sm-size {
+    overflow-x: hidden;
+  }
+}
+.invitation-header {
+  background-image: url('../../static/images/mountain2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5%;
+
+  @include apply-at-sm-size {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+}
+
+.countdown {
+  margin-top: 3%;
+}
+
+.countdown-item {
+  background: $color-orange;
+  border-radius: 20px;
+  margin: 5% 2rem;
+  display: inline-block;
+  padding: 1rem 0.5rem 0.5rem;
+  @include apply-at-sm-size {
+    font-size: 9px;
+    width: 42px;
+    heigth: 40px;
+    margin: 10% 0.5rem;
+  }
+}
+.countdown-time {
+  @include apply-at-sm-size {
+    broder: 1px solid green;
+    padding: 0 0.5rem;
+  }
+}
+.countdown-interval {
+  margin: 0  1rem 1rem;
+  @include apply-at-sm-size {
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+}
+.invitation-board {
+}
+.invitation-board img {
+  @include apply-at-sm-size {
+    width: 211.5px;
+    height: 69px;
+  }
+}
+
+.separator {
+  background-color: $color-orange;
+  height: 240px;
+  font-size: 46px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include apply-at-sm-size {
+    font-size: 11.5px;
+    height: 60px;
+  }
+}
+
+.mid-content {
+  background-image: url('../../static/images/bonFire.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  padding: 2rem;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+  @include apply-at-sm-size {
+    font-size: 17px;
+  }
+}
+.top p {
+  @include apply-at-sm-size {
+    @include content-center;
+    margin-top: 1rem;
+  }
+}
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 130px;
+  margin-bottom: 153px;
+  height: 100px;
+  padding: 1rem;
+  @include apply-at-sm-size {
+    @include content-center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+    height: 400px;
+    padding: 0;
+  }
+}
+.text-left {
+  margin-left: 5rem;
+  width: 20%;
+  font-size: 39px;
+  text-align: center;
+  @include apply-at-sm-size {
+    font-size: 17px;
+    margin: 0;
+    @include content-center;
+    width: 30%;
+  }
+}
+.text-right {
+  margin-right: 5rem;
+  width: 20%;
+  font-size: 39px;
+  text-align: center;
+  @include apply-at-sm-size {
+    font-size: 17px;
+    margin: 0;
+    @include content-center;
+    width: 30%;
+  }
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  @include apply-at-sm-size {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 442px;
+  @include apply-at-sm-size {
+    border: 1px solid blue;
+  }
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+  @include apply-at-sm-size {
+    white-space:normal;
+    width: 100%;
+    height: 100%;
+    @include content-center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slideshowSlider img {
+  @include apply-at-sm-size {
+    height: 187px;
+    @include content-center;
+
+  }
+}
+.slide-item {
+  @include apply-at-sm-size {
+    margin-right: 100px;
+    width: 300px;
+    height: 187px;
+  }
+}
+
+.slide {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  border-radius: 40px;
+  @include apply-at-sm-size {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.negative img {
+  width: 100%;
+}
+.tagline-wrapper {
+  margin-top: -30px;
+  padding-top: 5%;
+  height: 442px;
+  font-size: 50px;
+  background-color: $color-orange;
+  @include apply-at-sm-size {
+    font-size: 12px;
+    height: 118px;
+    padding-top: 10%;
+    font-weight: bold;
+  }
+}
+.verse-2 {
+  margin-top: -40px;
+  margin-bottom: -40px;
+  @include apply-at-sm-size {
+    margin: 0;
+  }
+}
+.invitation-content {
+  background-color: $color-dark-grey;
+  height: 100%;
+  margin-top: -30px;
+  padding-top: 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+  @include apply-at-sm-size {
+    font-size: 9px;
+  }
+}
+.content-title {
+  text-align: center;
+  color: $color-white;
+  font-size: 39px;
+  text-decoration-line: underline;
+  text-underline-offset: 21.5px;
+  @include apply-at-sm-size {
+    text-underline-offset: 8px;
+    font-size: 12px;
+  }
+}
+.invitation-time {
+  @include content-center;
+  margin-top: 111px;
+  font-size: 29px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-white;
+  width: 80%;
+  @include apply-at-sm-size {
+    font-size: 12px;
+    margin-top: 50px;
+    width: 90%;
+  }
+}
+.date p {
+  text-decoration-line: underline;
+  text-underline-offset: 21.5px;
+  @include apply-at-sm-size {
+    text-underline-offset: 8px;
+    font-size: 12px;
+  }
+}
+.time p {
+  text-decoration-line: underline;
+  text-underline-offset: 21.5px;
+  @include apply-at-sm-size {
+    text-underline-offset: 8px;
+    font-size: 12px;
+  }
+}
+.date img {
+  width: 90px;
+  height: 90px;
+  @include apply-at-sm-size {
+    width: 24px;
+    height: 24px;
+  }
+}
+.time img {
+  width: 90px;
+  height: 90px;
+  @include apply-at-sm-size {
+    width: 24px;
+    height: 24px;
+  }
+}
+.location {
+  color: $color-white;
+  padding: 2rem;
+  font-size: 39px;
+  @include apply-at-sm-size {
+    font-size: 12px;
+  }
+}
+.address {
+  @include content-center;
+  border-bottom: 2px solid $color-white;
+  width: 50%;
+  font-size: 22px;
+  @include apply-at-sm-size {
+    font-size: 12px;
+    width: 80%;
+  }
+}
+.maps {
+  margin-top: 100px;
+  @include apply-at-sm-size {
+    margin-top: 16px;
+  }
+}
+.btn-registration {
+  @include content-center;
+  background-color: $color-orange;
+  width: 280px;
+  height: 74px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  @include apply-at-sm-size {
+    width: 30%;
+    height: 30%;
+    font-size: 12px;
+  }
+}
+.attend {
+  color: $color-white;
+  margin: 36px 0;
+  @include apply-at-sm-size {
+    font-size: 12px;
+  }
+}
+.btn-registration:hover {
+  cursor: pointer;
+}
+.message-section {
+  background-image: url('../../static/images/forestFaded.png');
+  height: 100vh;
+  padding-top: 30px;
+  color: $color-white;
+  padding-bottom: 130px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include apply-at-sm-size {
+    margin-top: 0;
+    padding-bottom: 3rem;
+  }
+}
+.message-content-title {
+  font-size: 40px;
+  @include apply-at-sm-size {
+    font-size: 12px;
+  }
+}
+.message-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 640px;
+  @include apply-at-sm-size {
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.left-section {
+  @include apply-at-sm-size {
+    width: 220px;
+    heigth: 71px;
+  }
+}
+.right-section {
+  width: 50%;
+  align-self: flex-start;
+  margin-top: 10px;
+  height: 500px;
+  overflow-y: scroll;
+  @include apply-at-sm-size {
+    padding: 1rem;
+    width: 90%;
+  }
+}
+.message-item-wrapper {
+  display: flex;
+  color: black;
+  align-items: center;
+  height: 100px;
+  margin-top: 10px;
+  @include apply-at-sm-size {
+    width: 100%;
+  }
+}
+.message-bubble {
+  margin: 1rem;
+  background-color: $color-white;
+  border-radius: 17px;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  margin-left: -5px;
+  @include apply-at-sm-size {
+    margin-left: 15px;
+    width: 80%;
+  }
+}
+.avatar {
+  @include apply-at-sm-size {
+    height: 22px;
+    width: 22px;
+    margin-bottom: 10%;
+    margin-right: 10px;
+  }
+}
+.name {
+  margin-bottom: 1rem;
+  font-size: 10px;
+  @include apply-at-sm-size {
+    margin-bottom: 0.5rem;
+  }
+}
+.message {
+  font-size: 15px;
+  @include apply-at-sm-size {
+    font-size: 10px;
+  }
+}
+.message-shape {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  @include apply-at-sm-size {
+    padding-left: 1rem;
+  }
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid $color-white;
+  border-bottom: 20px solid transparent;
+  right: 20px;
+  @include apply-at-sm-size {
+    position: relative;
+    border-top: 20px solid transparent;
+    border-right: 20px solid $color-white;
+    border-bottom: 20px solid transparent;
+    margin-left: 2.5rem;
+    margin-right: -40px;
+    z-index: 1;
+  }
+}
+.pamflet-section {
+  background-color: $color-dark-grey;
+  padding: 100px 0 50px;
+  @include apply-at-sm-size {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.pamflet-section img {
+  @include apply-at-sm-size {
+    width: 256px;
+    height: 360px;
+  }
+}
+.invitation-content {
+  @include apply-at-sm-size {
+    padding-bottom: 50px;
+  }
+}
+.mid-content-sm {
+  background-image: url('../../static/images/bg-sm.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  height: 100%;
+}
