@@ -64,7 +64,7 @@ const PopupProkes =  withStyles(styles)((props) => {
               <div className='icon-wrapper-popup'>
                 <ScrollAnimation animateIn='animate__fadeInBottomLeft'>
                   <img src={Temp} alt='mask' className='icon-prokes' />
-                  <p>Tamu undangan wajib mengenakan masker</p>
+                  <p>Suhu tubuh normal dibawah 37,5 c</p>
                 </ScrollAnimation>
               </div>
               <div className='icon-wrapper-popup'>

@@ -360,7 +360,7 @@
   justify-content: space-around;
   height: 640px;
   @include apply-at-sm-size {
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
     height: 100%;
   }
@@ -378,7 +378,7 @@
   height: 500px;
   overflow-y: scroll;
   @include apply-at-sm-size {
-    padding: 1rem;
+    padding: 0 1rem;
     width: 90%;
   }
 }
@@ -386,7 +386,7 @@
   display: flex;
   color: black;
   align-items: center;
-  height: 100px;
+  height: auto;
   margin-top: 10px;
   @include apply-at-sm-size {
     width: 100%;

@@ -1,14 +1,14 @@
-@import '../../styles/base';
+@import "../../styles/base";
 
 .started-container {
   @include base-font;
-  background-image: url('../../static/images/wood-faded.png');
+  background-image: url("../../static/images/wood-faded.png");
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   @include apply-at-sm-size {
-    background-image: url('../../static/images/wooden-sm.png');
+    background-image: url("../../static/images/wooden-sm.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

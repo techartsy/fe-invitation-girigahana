@@ -42,15 +42,18 @@ const Invitation = () => {
   const images2 = [image4, image5, image6];
   const images3 = [image7, image8, image9];
   const images4 = [image10, image11, image12];
+  const [totalParticipants, setTotalParticipant] = useState(0);
   const dispatch = useDispatch();
   const delay = 3000;
   const timeoutRef = useRef(null);
 
   const participants = useSelector(state => state.invitationReducer.participants);
+  const sortedParticipants = participants && [...participants].reverse();
 
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    const difference = +new Date(`09/11/${year}`) - +new Date();
+    const nextYear = year + 1;
+    const difference = +new Date(`09/11/${nextYear}`) - +new Date();
     let timeLeft = {};
     if (difference > 0) {
       timeLeft = {
@@ -124,7 +127,7 @@ const Invitation = () => {
   }, [])
 
   useEffect(() => {
-    filterAttendParticipants();
+    calculateTotalParticipants();
   }, [participants])
 
   const filterAttendParticipants = () => {
@@ -132,6 +135,14 @@ const Invitation = () => {
       return person.attend.toLowerCase() === 'ya';
     })
     setAttending(attendingEvent);
+  }
+
+  const calculateTotalParticipants = () => {
+    let total = 0;
+    participants && participants.map((person) => {
+      total += person.pax;
+    })
+    setTotalParticipant(total);
   }
 
   const handleClickOpen = () => {
@@ -308,7 +319,7 @@ const Invitation = () => {
         </div>
         <div className='attend'>
           <ScrollAnimation animateIn='animate__zoomIn'>
-            <p>Akan hadir : {attending.length} Orang</p>
+            <p>Akan hadir : {totalParticipants} Orang</p>
           </ScrollAnimation>
         </div>
         <ScrollAnimation animateIn='animate__zoomIn'>
@@ -327,7 +338,7 @@ const Invitation = () => {
           </div>
           <div className='right-section'>
             <ScrollAnimation animateIn='animate__fadeIn' animateOnce>
-            {participants && participants.map((item, idx) => {
+            {sortedParticipants && sortedParticipants.map((item, idx) => {
               return (
                 item.message && (
                   <div className='message-item-wrapper' key={idx}>
